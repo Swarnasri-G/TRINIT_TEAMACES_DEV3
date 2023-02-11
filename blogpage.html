@@ -5,6 +5,19 @@
     <title>My Website</title>
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
     <script src="path/to/your/script.js"></script>
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "96fd4c60-67dc-488e-a3e8-782124455aab", // The ID of this integration.
+          region: "jp-tok", // The region your integration is hosted in.
+          serviceInstanceID: "dc09883f-ba1d-407a-8c01-7c70a7f6a04c", // The ID of your service instance.
+          onLoad: function(instance) { instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
     <style>
         body {
             font-family: Arial, sans-serif;
