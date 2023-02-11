@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Farmer Feedback Page</title>
+  <style>
+    /* Add styles for the form and page */
+body {
+  background-image: url('smart2.jpg');
+  background-size: cover;
+  font-family: sans-serif;
+}
+    form {
+      width: 500px;
+      margin: 0 auto;
+      text-align: center;
+      background-color:rgba(255, 255, 255, 0.5);
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 10px;
+      background-color:whitesmoke;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 5px;
+      border: 1px solid #4CAF50;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+<body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1 style="font-family:verdana"><center>Farmer Feedback Page</center></h1>
+  <form action="submit_feedback.php" method="post">
+    <label for="name" style="font-family:verdana">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email" style="font-family:verdana">Email:</label>
+    <input type="text" id="email" name="email" required>
+
+    <label for="farm-name" style="font-family:verdana">Farm Name:</label>
+    <input type="text" id="farm-name" name="farm-name" required>
+
+    <label for="feedback" style="font-family:verdana">Feedback:</label>
+    <textarea id="feedback" name="feedback" required></textarea>
+
+    <input type="submit" value="Submit Feedback">
+  </form>
+</body>
+</html>

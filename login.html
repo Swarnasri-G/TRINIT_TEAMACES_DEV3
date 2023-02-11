@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Agricultural Login Page</title>
+    <style>
+      body {
+        background-image: url("https://wallpapercave.com/wp/wp2024271.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .container {
+        margin: 0 auto;
+        max-width: 600px;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 20px;
+        margin-top: 100px;
+        border-radius: 10px; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+      }
+      h1 {
+        text-align: center;
+        font-size: 36px;
+      }
+      form {
+        margin-top: 20px;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+      }
+      button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      .imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+        position: relative;
+      }
+      img.avatar {
+        width: 100px;
+        border-radius: 50%;
+      }
+      .user-type {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+    </style>
+    
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "96fd4c60-67dc-488e-a3e8-782124455aab", // The ID of this integration.
+        region: "jp-tok", // The region your integration is hosted in.
+        serviceInstanceID: "dc09883f-ba1d-407a-8c01-7c70a7f6a04c", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+      };
+      setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="imgcontainer">
+        <img src="https://kapilkhandelwal.com/wp-content/uploads/2020/12/298-2983638_indian-farmer-png-indian-farmer-cartoon-png-transparent-860x508.png" alt="Avatar" class="avatar">
+      </div>
+      <h1>Agricultural Login Page</h1>
+      <div class="user-type">
+        <input type="radio" id="user" name="user-type" value="user">
+        <label for="user">User</label>
+        <input type="radio" id="admin" name="user-type" value="admin">
+        <label for="admin">Admin</label>
+        <input type="radio" id="farmer-agent" name="user-type" value="farmer-agent">
+        <label for="farmer-agent">Farmer/Agent</label>
+      </div>
+      <form>
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" required>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+
+      </form>
+      <a href = "blogpage.html"><button type="submit">Sign In</button></a>
+      <a href = "Signup.html"><button type="submit" >Sign Up</button></a>
+
+    </div>
+  </body>
+</html>
